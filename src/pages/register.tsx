@@ -35,4 +35,5 @@ const RegisterPage: NextPage = () => {
     </>
   );
 };
+
 export default RegisterPage;

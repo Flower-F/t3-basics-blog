@@ -5,10 +5,10 @@ export const createUserSchema = z.object({
   email: z.string().email(),
 });
 
-export const createUserOutputSchema = z.object({
-  name: z.string(),
-  email: z.string().email(),
-});
+// export const createUserOutputSchema = z.object({
+//   name: z.string(),
+//   email: z.string().email(),
+// });
 
 export type CreateUserInput = z.TypeOf<typeof createUserSchema>;
 
@@ -21,5 +21,5 @@ export const requestOtpSchema = z.object({
 export type RequestOtpInput = z.TypeOf<typeof requestOtpSchema>;
 
 export const verifyOtpSchema = z.object({
-  hash: z.string()
-})
+  hash: z.string(),
+});

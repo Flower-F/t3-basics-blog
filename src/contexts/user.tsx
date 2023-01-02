@@ -1,8 +1,7 @@
-import type { inferProcedureOutput } from '@trpc/server';
 import { createContext, useContext, type ReactNode } from 'react';
-import { AppRouter } from '../server/trpc/router/_app';
+import { type RouterOutputs } from '../utils/trpc';
 
-type UserContext = AppRouter['user']['me']['_def']['_ctx_out']['user'];
+type UserContext = RouterOutputs['user']['me'];
 const UserContext = createContext<UserContext>(null);
 
 function UserContextProvider({ children, value }: { children: ReactNode; value: UserContext | undefined }) {
